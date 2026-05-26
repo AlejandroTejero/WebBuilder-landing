@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2309090b'/%3E%3Cpath d='M12 11l-4 5 4 5M20 11l4 5-4 5' stroke='%2316a34a' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="icon" href="static/img/favicon.ico" />
 </head>
 <body>
 
@@ -23,7 +23,7 @@
 <nav class="navbar">
   <div class="nav-inner">
     <a href="#top" class="nav-logo">
-      <i class="ti ti-code-circle-2"></i>
+      <img src="static/img/logo.png" style="height:28px;width:auto;" alt="WebBuilder logo">
       <span>WebBuilder</span>
     </a>
     <div class="nav-links">
@@ -223,23 +223,15 @@
 
     <div class="examples-grid stagger">
 
-      <!-- Example 1 — Tienda Online -->
+      <!-- Example 1 — Rick and Morty -->
       <div class="example-card reveal">
         <div class="example-preview">
-          <!--
-            SCREENSHOT PLACEHOLDER — sitio "Tienda Online" corriendo en localhost
-            Cuando tengas la captura sustituye por:
-              <img src="static/img/example-tienda-online.png" alt="Tienda Online running at localhost">
-          -->
-          <div class="screenshot-placeholder">
-            <i class="ti ti-photo"></i>
-            <span data-i18n="ex.ph">SCREENSHOT — replace with generated site running</span>
-          </div>
+          <img src="static/img/casosdeuso/rickmortyhome.png" alt="Rick y Morty Catalog running at localhost">
         </div>
         <div class="example-meta">
-          <div class="example-api"><span class="api-label">API</span><code>fakestoreapi.com/products</code></div>
-          <h3 data-i18n="ex.e1.t">Online Store</h3>
-          <p data-i18n="ex.e1.d">Product catalog with image, name, price, category and rating. Detail page per product. Responsive with Tailwind.</p>
+          <div class="example-api"><span class="api-label">API</span><code>rickandmortyapi.com/api/character</code></div>
+          <h3 data-i18n="ex.e1.t">Rick &amp; Morty Catalog</h3>
+          <p data-i18n="ex.e1.d">Character catalog with image, name, species and status. Detail page per character. Responsive with Tailwind.</p>
           <div class="example-tags">
             <span data-i18n="ex.tag.catalog">catalog</span>
             <span>JSON</span>
@@ -248,25 +240,17 @@
         </div>
       </div>
 
-      <!-- Example 2 — Countries Explorer -->
+      <!-- Example 2 — Criptomonedas -->
       <div class="example-card reveal">
         <div class="example-preview">
-          <!--
-            SCREENSHOT PLACEHOLDER — sitio "Countries Explorer" corriendo en localhost
-            Cuando tengas la captura sustituye por:
-              <img src="static/img/example-countries.png" alt="Countries Explorer running at localhost">
-          -->
-          <div class="screenshot-placeholder">
-            <i class="ti ti-photo"></i>
-            <span data-i18n="ex.ph">SCREENSHOT — replace with generated site running</span>
-          </div>
+          <img src="static/img/casosdeuso/criptohome.png" alt="Criptomonedas dashboard running at localhost">
         </div>
         <div class="example-meta">
-          <div class="example-api"><span class="api-label">API</span><code>restcountries.com/v3.1/all</code></div>
-          <h3 data-i18n="ex.e2.t">Countries Explorer</h3>
-          <p data-i18n="ex.e2.d">Country cards with flag, name, capital and population. Filterable catalog. No API key required.</p>
+          <div class="example-api"><span class="api-label">API</span><code>api.coingecko.com/api/v3/coins/markets</code></div>
+          <h3 data-i18n="ex.e2.t">Crypto Dashboard</h3>
+          <p data-i18n="ex.e2.d">Dashboard with top 100 coins, price, 24h change and market cap. Live data loaded on startup.</p>
           <div class="example-tags">
-            <span data-i18n="ex.tag.catalog">catalog</span>
+            <span data-i18n="ex.tag.dashboard">dashboard</span>
             <span>JSON</span>
             <span>Docker</span>
           </div>
@@ -276,14 +260,7 @@
       <!-- Example 3 — Cocktail Recipes -->
       <div class="example-card reveal">
         <div class="example-preview">
-          <!--
-            SCREENSHOT PLACEHOLDER — sitio "Cocktail Recipes" corriendo en localhost
-            Cuando tengas la captura sustituye por:
-              <img src="static/img/example-cocktails.png" alt="Cocktail Recipes running at localhost">
-          -->
-          <div class="screenshot-placeholder">
-            <i class="ti ti-photo"></i>
-            <span data-i18n="ex.ph">SCREENSHOT — replace with generated site running</span>
+            <img src="static/img/casosdeuso/cocktailshome.png" alt="Cocktail Recipes running at localhost">
           </div>
         </div>
         <div class="example-meta">
@@ -500,11 +477,9 @@
           <li data-i18n="p.intro.l4">Save every analysis to your personal history for later review.</li>
         </ul>
         <div class="callout callout-info"><i class="ti ti-info-circle"></i><div data-i18n="p.intro.note">This is a Final Degree Project. The platform is in active development — expect rough edges. Your feedback helps.</div></div>
-        <!--
-          SCREENSHOT PLACEHOLDER — página principal de WebBuilder (la app)
-          Cuando tengas una captura limpia de la home sustituye por:
-            <img src="static/img/screenshot-home.png" alt="WebBuilder home page">
-        -->
+
+            <img src="static/img/homeWB.png" alt="WebBuilder home page">
+        
         <div class="media-placeholder"><i class="ti ti-photo"></i><div class="label" data-i18n="media.screenshot">SCREENSHOT PLACEHOLDER</div><div class="hint" data-i18n="media.hint.home">Replace with screenshot of WebBuilder home page</div></div>
       </div>
 
@@ -536,11 +511,9 @@
           <li data-i18n="p.reg.l2">A password (use a strong one — your analyses are stored under this account).</li>
           <li data-i18n="p.reg.l3">A username for display.</li>
         </ul>
-        <!--
-          SCREENSHOT PLACEHOLDER — formulario de registro
-          Cuando tengas la captura sustituye por:
-            <img src="static/img/screenshot-register.png" alt="Registration form">
-        -->
+        
+            <img src="static/img/registerWB.png" alt="Registration form">
+        
         <div class="media-placeholder"><i class="ti ti-photo"></i><div class="label" data-i18n="media.screenshot">SCREENSHOT PLACEHOLDER</div><div class="hint" data-i18n="media.hint.register">Replace with screenshot of the registration form</div></div>
         <div class="callout callout-info"><i class="ti ti-mail"></i><div data-i18n="p.reg.note">After registering, an n8n workflow sends a welcome email. If you don't receive it within a few minutes, check your spam folder.</div></div>
       </div>
@@ -550,12 +523,10 @@
         <div class="breadcrumb">Manual / Account / <span class="active" data-i18n="bc.login">Login</span></div>
         <h1 data-i18n="p.log.title">Logging in</h1>
         <p class="lead" data-i18n="p.log.lead">Once registered, log in with your credentials. Each session triggers an automatic notification email.</p>
-        <!--
-          SCREENSHOT PLACEHOLDER — formulario de login
-          Cuando tengas la captura sustituye por:
-            <img src="static/img/screenshot-login.png" alt="Login form">
-        -->
-        <div class="media-placeholder"><i class="ti ti-photo"></i><div class="label" data-i18n="media.screenshot">SCREENSHOT PLACEHOLDER</div><div class="hint" data-i18n="media.hint.login">Replace with screenshot of the login form</div></div>
+            
+          <img src="static/img/loginWB.png" alt="Login form">
+        
+          <div class="media-placeholder"><i class="ti ti-photo"></i><div class="label" data-i18n="media.screenshot">SCREENSHOT PLACEHOLDER</div><div class="hint" data-i18n="media.hint.login">Replace with screenshot of the login form</div></div>
         <div class="callout callout-warn"><i class="ti ti-alert-triangle"></i><div data-i18n="p.log.warn">If you can't access your account, password recovery is being implemented. For now, contact the administrator.</div></div>
       </div>
 
@@ -598,12 +569,7 @@
           <li data-i18n="p.s2.l3"><strong>Human-readable labels</strong> — clean names for each field.</li>
           <li data-i18n="p.s2.l4"><strong>Data preview</strong> — first few normalized records.</li>
         </ul>
-        <!-- asistente-schema.png: propuesta completa con tipo "catalog", campos y etiquetas -->
-        <img
-          src="static/img/asistente-schema.png"
-          alt="AI schema proposal showing site type catalog, 7 fields with human-readable labels"
-          style="border:1px solid var(--border-subtle);border-radius:8px;margin:20px 0;width:100%"
-        />
+        
         <h2 data-i18n="p.s2.h2">Edit the schema before generating</h2>
         <p data-i18n="p.s2.p1">If the proposal doesn't match what you want, use the editor to adjust fields, labels and site type — or write a natural language instruction to regenerate the plan entirely.</p>
         <!-- asistente-edit.png: editor de campos con checkboxes y preview de datos reales -->
@@ -613,9 +579,9 @@
           style="border:1px solid var(--border-subtle);border-radius:8px;margin:20px 0;width:100%"
         />
         <pre><span class="comment"># Example custom prompts to guide the AI</span>
-"Make it a minimalist portfolio, hide the price field."
-"Show this as a calendar of events grouped by month."
-"Highlight the rating field prominently in each card."</pre>
+          "Make it a minimalist portfolio, hide the price field."
+          "Show this as a calendar of events grouped by month."
+          "Highlight the rating field prominently in each card."</pre>
         <!--
           VIDEO PLACEHOLDER — vídeo mostrando edición y regeneración
           Cuando tengas el vídeo sustituye por:
@@ -673,16 +639,7 @@
         <pre><span class="key">$</span> docker build -t my-site .
 <span class="key">$</span> docker run -p 8000:8000 my-site</pre>
         <p data-i18n="p.s4.p1">Visit <code>http://localhost:8000</code> and your generated site is live.</p>
-        <!--
-          SCREENSHOT PLACEHOLDER — la captura más importante que falta
-          Necesitas abrir uno de los sitios generados en el navegador y hacer la captura
-          Cuando la tengas sustituye por:
-            <img src="static/img/example-tienda-online.png" alt="Generated Tienda Online running in browser">
-        -->
-        <div class="media-placeholder">
-          <i class="ti ti-photo"></i>
-          <div class="label" data-i18n="media.screenshot">SCREENSHOT PLACEHOLDER</div>
-          <div class="hint" data-i18n="media.hint.step4">The most important missing screenshot — replace with the generated site running in the browser at localhost:8000</div>
+          <img src="static/img/casosdeuso/rickmortyhome.png" alt="Generated Rick & Morty Catalog running in browser at localhost">
         </div>
       </div>
 
