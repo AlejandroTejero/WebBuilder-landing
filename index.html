@@ -14,8 +14,9 @@
 </head>
 <body>
 
-<!-- Scroll progress bar -->
+<!-- SCROLL PROGRESS BAR -->
 <div id="scroll-progress"></div>
+
 
 <!-- ============================================================
      NAVBAR
@@ -38,18 +39,21 @@
         <button id="lang-en" class="active" onclick="setLang('en')">EN</button>
         <button id="lang-es" onclick="setLang('es')">ES</button>
       </div>
+      <!-- PENDIENTE: sustituir href por URL real cuando esté desplegado -->
       <a href="#manual" class="nav-cta" data-i18n="nav.cta">Get started</a>
+      <!-- <a href="TU-URL-AQUI" class="nav-cta" target="_blank" data-i18n="nav.cta">Get started</a> -->
     </div>
   </div>
 </nav>
 
+
 <!-- ============================================================
-     HERO — Two columns
+     HERO
      ============================================================ -->
 <section id="top" class="hero">
   <div class="hero-grid">
 
-    <!-- Left: copy -->
+    <!-- Columna izquierda: texto y botones -->
     <div class="hero-copy">
       <div class="hero-badge reveal">
         <i class="ti ti-sparkles"></i>
@@ -72,6 +76,11 @@
           <i class="ti ti-player-play"></i>
           <span data-i18n="hero.cta2">See how it works</span>
         </a>
+        <!-- PENDIENTE: sustituir href por URL real cuando esté desplegado -->
+        <a href="TU-URL-AQUI" class="btn-primary" target="_blank">
+          <i class="ti ti-external-link"></i>
+          <span data-i18n="hero.cta3">WebBuilder</span>
+        </a>
       </div>
       <div class="hero-chips reveal" style="transition-delay:.30s">
         <span data-i18n="hero.chip1">Multi-format input</span>
@@ -80,7 +89,7 @@
       </div>
     </div>
 
-    <!-- Right: app mockup -->
+    <!-- Columna derecha: mockup de la app -->
     <div class="hero-visual reveal-right" style="transition-delay:.18s">
       <div class="app-frame">
         <div class="frame-titlebar">
@@ -132,10 +141,10 @@
   </div>
 </section>
 
+
 <!-- ============================================================
      STATS STRIP
-     Números reales del panel de métricas (experimentosvalidacion/resumen.png)
-     67 análisis · 61 sitios · 6 workflows · 95.5% tasa de éxito
+     Números reales: 67 análisis · 61 sitios · 6 workflows · 95% éxito
      ============================================================ -->
 <div class="stats-strip">
   <div class="stats-grid stagger">
@@ -157,6 +166,7 @@
     </div>
   </div>
 </div>
+
 
 <!-- ============================================================
      HOW IT WORKS
@@ -194,26 +204,15 @@
       </div>
     </div>
 
-    <!--
-      VIDEO PLACEHOLDER — demo del flujo completo (~60s)
-      Cuando tengas el vídeo sustituye este bloque por:
-        <video src="static/video/demo-flow.mp4" controls poster="static/img/demo-poster.png"
-               style="width:100%;border-radius:8px;margin-top:48px"></video>
-      O YouTube:
-        <iframe width="100%" height="480" src="https://www.youtube.com/embed/TU_VIDEO_ID"
-                style="border:none;border-radius:8px;margin-top:48px" allowfullscreen></iframe>
-    -->
-    <div class="media-placeholder media-placeholder--wide reveal" style="margin-top:48px">
-      <i class="ti ti-video"></i>
-      <div class="label" data-i18n="media.videoFlow">VIDEO PLACEHOLDER — Full flow demo</div>
-      <div class="hint" data-i18n="media.videoFlowHint">Replace with ~60s screen recording: URL input → AI plan → generation → site running</div>
-    </div>
+    <!-- VIDEO: demo flujo completo (~60s) — también se usa en Manual › Quick Start -->
+    <video src="static/video/pipeline.mp4" controls style="width:100%;border-radius:8px;margin-top:48px"></video>
 
   </div>
 </section>
 
+
 <!-- ============================================================
-     EXAMPLES OF GENERATED SITES
+     EXAMPLES — Sitios generados reales
      ============================================================ -->
 <section id="examples" class="section-dark">
   <div class="section-container">
@@ -223,7 +222,7 @@
 
     <div class="examples-grid stagger">
 
-      <!-- Example 1 — Rick and Morty -->
+      <!-- EJEMPLO 1: RICK & MORTY -->
       <div class="example-card reveal">
         <div class="example-preview">
           <img src="static/img/casosdeuso/rickmortyhome.png" alt="Rick y Morty Catalog running at localhost">
@@ -240,7 +239,7 @@
         </div>
       </div>
 
-      <!-- Example 2 — Criptomonedas -->
+      <!-- EJEMPLO 2: CRIPTOMONEDAS -->
       <div class="example-card reveal">
         <div class="example-preview">
           <img src="static/img/casosdeuso/criptohome.png" alt="Criptomonedas dashboard running at localhost">
@@ -257,11 +256,10 @@
         </div>
       </div>
 
-      <!-- Example 3 — Cocktail Recipes -->
+      <!-- EJEMPLO 3: COCKTAILS -->
       <div class="example-card reveal">
         <div class="example-preview">
-            <img src="static/img/casosdeuso/cocktailshome.png" alt="Cocktail Recipes running at localhost">
-          </div>
+          <img src="static/img/casosdeuso/cocktailshome.png" alt="Cocktail Recipes running at localhost">
         </div>
         <div class="example-meta">
           <div class="example-api"><span class="api-label">API</span><code>thecocktaildb.com/api/json/v1</code></div>
@@ -277,18 +275,19 @@
 
     </div>
 
-    <!-- historial-publicaciones.png como prueba social: 47 sitios reales publicados -->
+    <!-- IMAGEN: historial-publicaciones.png — prueba social: 47 sitios reales -->
     <div class="reveal" style="margin-top:40px">
       <p style="font-size:var(--text-sm);color:var(--text-muted);margin-bottom:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.04em;text-align:center" data-i18n="ex.histLabel">47 PUBLISHED SITES IN THE SYSTEM</p>
       <img
         src="static/img/historial-publicaciones.png"
-        alt="47 real sites generated and published — Countries Explorer, Cocktail Recipes, Modern Online Store and more"
+        alt="47 real sites generated and published"
         style="border:1px solid var(--border-subtle);border-radius:10px;width:100%;max-width:900px;display:block;margin:0 auto"
       />
     </div>
 
   </div>
 </section>
+
 
 <!-- ============================================================
      LLM PROVIDERS
@@ -322,26 +321,24 @@
       </div>
     </div>
 
-    <!-- eleccion-llm.png — modal de selección de modelo en la app -->
-    <div class="reveal" style="margin-top:32px;max-width:680px">
-      <img
-        src="static/img/eleccion-llm.png"
-        alt="LLM model selection modal in WebBuilder showing Llama 4 Scout, Llama 3.3 70B and Qwen3 Coder"
-        style="border:1px solid var(--border-subtle);border-radius:10px;width:100%"
-      />
-    </div>
-
-    <div class="llm-env reveal" style="margin-top:32px">
-      <div class="llm-env-label" data-i18n="llm.envLabel">Switch provider in seconds — just update your <code>.env</code>:</div>
-      <div class="llm-env-code">
-        <div><span class="env-key">LLM_BASE_URL</span>=<span class="env-val">https://api.groq.com/openai/v1</span></div>
-        <div><span class="env-key">LLM_API_KEY</span>=<span class="env-val">your_api_key</span></div>
-        <div><span class="env-key">LLM_MODEL</span>=<span class="env-val">llama-3.3-70b-versatile</span></div>
+    <!-- IMAGEN: eleccion-llm.png + bloque .env lado a lado -->
+    <div class="reveal" style="margin-top:32px;display:flex;gap:32px;align-items:center">
+      <div class="llm-env" style="flex:0 0 35%">
+        <div class="llm-env-label" data-i18n="llm.envLabel">Switch provider in seconds — just update your <code>.env</code>:</div>
+        <div class="llm-env-code">
+          <div><span class="env-key">LLM_BASE_URL</span>=<span class="env-val">https://api.groq.com/openai/v1</span></div>
+          <div><span class="env-key">LLM_API_KEY</span>=<span class="env-val">your_api_key</span></div>
+          <div><span class="env-key">LLM_MODEL</span>=<span class="env-val">llama-3.3-70b-versatile</span></div>
+        </div>
+      </div>
+      <div style="flex:0 0 60%">
+        <img src="static/img/eleccion-llm.png" alt="LLM model selection modal" style="border:1px solid var(--border-subtle);border-radius:10px;width:100%"/>
       </div>
     </div>
 
   </div>
 </section>
+
 
 <!-- ============================================================
      CORE FEATURES
@@ -387,38 +384,42 @@
   </div>
 </section>
 
+
 <!-- ============================================================
      N8N AUTOMATIONS
      ============================================================ -->
 <section id="automations" class="automations">
   <div class="section-container">
     <div class="automations-grid">
+
+      <!-- Columna izquierda: título + lista de workflows -->
       <div>
         <div class="section-label reveal" data-i18n="auto.label">N8N AUTOMATIONS</div>
         <h2 class="section-title reveal" data-i18n="auto.title">Decoupled workflows for everything outside Django.</h2>
         <p class="section-sub reveal" data-i18n="auto.sub">From welcome emails to auto-shutdown of inactive containers — handled by n8n, not bolted into the core app.</p>
-
-        <!-- n8n-interfaz.png — panel real con los 6 workflows todos en Published -->
-        <div class="reveal" style="margin-top:24px">
-          <img
-            src="static/img/n8n-interfaz.png"
-            alt="n8n dashboard showing all 6 WebBuilder workflows published and active"
-            style="border:1px solid var(--border-subtle);border-radius:8px;width:100%;max-width:480px"
-          />
+        <div class="automations-list stagger" style="margin-top:24px">
+          <div class="automation-item reveal"><span class="automation-tag">AUTH</span><span class="automation-name">welcome-email</span><span class="automation-desc" data-i18n="auto.i1">On register</span></div>
+          <div class="automation-item reveal"><span class="automation-tag">AUTH</span><span class="automation-name">session-alert</span><span class="automation-desc" data-i18n="auto.i2">On login</span></div>
+          <div class="automation-item reveal"><span class="automation-tag">AI</span><span class="automation-name">generation-done</span><span class="automation-desc" data-i18n="auto.i3">Project ready</span></div>
+          <div class="automation-item reveal"><span class="automation-tag">OPS</span><span class="automation-name">deploy</span><span class="automation-desc" data-i18n="auto.i4">Docker build &amp; run</span></div>
+          <div class="automation-item reveal"><span class="automation-tag">OPS</span><span class="automation-name">auto-shutdown</span><span class="automation-desc" data-i18n="auto.i5">Idle containers, hourly</span></div>
+          <div class="automation-item reveal"><span class="automation-tag">OPS</span><span class="automation-name">health-check</span><span class="automation-desc" data-i18n="auto.i6">Daily 11:00 report</span></div>
         </div>
       </div>
 
-      <div class="automations-list stagger">
-        <div class="automation-item reveal"><span class="automation-tag">AUTH</span><span class="automation-name">welcome-email</span><span class="automation-desc" data-i18n="auto.i1">On register</span></div>
-        <div class="automation-item reveal"><span class="automation-tag">AUTH</span><span class="automation-name">session-alert</span><span class="automation-desc" data-i18n="auto.i2">On login</span></div>
-        <div class="automation-item reveal"><span class="automation-tag">AI</span><span class="automation-name">generation-done</span><span class="automation-desc" data-i18n="auto.i3">Project ready</span></div>
-        <div class="automation-item reveal"><span class="automation-tag">OPS</span><span class="automation-name">deploy</span><span class="automation-desc" data-i18n="auto.i4">Docker build &amp; run</span></div>
-        <div class="automation-item reveal"><span class="automation-tag">OPS</span><span class="automation-name">auto-shutdown</span><span class="automation-desc" data-i18n="auto.i5">Idle containers, hourly</span></div>
-        <div class="automation-item reveal"><span class="automation-tag">OPS</span><span class="automation-name">health-check</span><span class="automation-desc" data-i18n="auto.i6">Daily 11:00 report</span></div>
+      <!-- Columna derecha: IMAGEN n8n-interfaz.png -->
+      <div class="reveal" style="align-self:center">
+        <img
+          src="static/img/n8n-interfaz.png"
+          alt="n8n dashboard showing all 6 WebBuilder workflows published and active"
+          style="border:1px solid var(--border-subtle);border-radius:8px;width:100%;min-width:700px;transform:scaleY(1.1);transform-origin:left"
+        />
       </div>
+
     </div>
   </div>
 </section>
+
 
 <!-- ============================================================
      MANUAL DIVIDER
@@ -430,13 +431,14 @@
   <div class="arrow-down"><i class="ti ti-chevron-down"></i></div>
 </div>
 
+
 <!-- ============================================================
-     MANUAL — Sidebar + content
+     MANUAL — Sidebar + contenido
      ============================================================ -->
 <div class="manual-shell">
   <div class="manual-wrapper">
 
-    <!-- Sidebar -->
+    <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="sb-section-label" data-i18n="sb.overview">OVERVIEW</div>
       <div class="sb-item active" data-page="intro"      onclick="showPage('intro',this)"><i class="ti ti-home"></i><span data-i18n="sb.intro">Introduction</span></div>
@@ -460,8 +462,9 @@
       <div class="sb-item" data-page="faq"     onclick="showPage('faq',this)"><i class="ti ti-help-circle"></i><span>FAQ</span></div>
     </aside>
 
-    <!-- Content -->
+    <!-- CONTENIDO DEL MANUAL -->
     <div class="manual-content">
+
 
       <!-- ── INTRO ── -->
       <div class="manual-page active" id="page-intro">
@@ -477,11 +480,10 @@
           <li data-i18n="p.intro.l4">Save every analysis to your personal history for later review.</li>
         </ul>
         <div class="callout callout-info"><i class="ti ti-info-circle"></i><div data-i18n="p.intro.note">This is a Final Degree Project. The platform is in active development — expect rough edges. Your feedback helps.</div></div>
-
-            <img src="static/img/homeWB.png" alt="WebBuilder home page">
-        
-        <div class="media-placeholder"><i class="ti ti-photo"></i><div class="label" data-i18n="media.screenshot">SCREENSHOT PLACEHOLDER</div><div class="hint" data-i18n="media.hint.home">Replace with screenshot of WebBuilder home page</div></div>
+        <!-- IMAGEN: homeWB.png — pantalla principal de la app -->
+        <img src="static/img/homeWB.png" alt="WebBuilder home page">
       </div>
+
 
       <!-- ── QUICK START ── -->
       <div class="manual-page" id="page-quickstart">
@@ -492,13 +494,10 @@
         <div class="step-row"><div class="step-row-num">2</div><div class="step-row-body"><div class="step-row-title" data-i18n="p.quick.s2t">Paste a public API URL</div><p class="step-row-text" data-i18n="p.quick.s2d">Any endpoint returning JSON or XML. WebBuilder detects the format automatically.</p></div></div>
         <div class="step-row"><div class="step-row-num">3</div><div class="step-row-body"><div class="step-row-title" data-i18n="p.quick.s3t">Review the AI proposal and generate</div><p class="step-row-text" data-i18n="p.quick.s3d">Accept the LLM plan or regenerate with a custom prompt. Click generate.</p></div></div>
         <div class="step-row"><div class="step-row-num">4</div><div class="step-row-body"><div class="step-row-title" data-i18n="p.quick.s4t">Download the ZIP and run it</div><p class="step-row-text" data-i18n="p.quick.s4d">Unzip, build the Docker image, and you're online.</p></div></div>
-        <!--
-          VIDEO PLACEHOLDER — vídeo demo de 60 segundos
-          Cuando tengas el vídeo sustituye por:
-            <video src="static/video/demo-quickstart.mp4" controls style="width:100%;border-radius:8px;margin-top:16px"></video>
-        -->
-        <div class="media-placeholder"><i class="ti ti-video"></i><div class="label" data-i18n="media.video">VIDEO PLACEHOLDER</div><div class="hint" data-i18n="media.hint.quickstart">Replace with 60-second full demo video</div></div>
+        <!-- VIDEO: pipeline.mp4 — mismo vídeo que el del hero (flujo completo) -->
+        <video src="static/video/pipeline.mp4" controls style="width:100%;border-radius:8px;margin-top:16px"></video>
       </div>
+
 
       <!-- ── REGISTER ── -->
       <div class="manual-page" id="page-register">
@@ -511,26 +510,24 @@
           <li data-i18n="p.reg.l2">A password (use a strong one — your analyses are stored under this account).</li>
           <li data-i18n="p.reg.l3">A username for display.</li>
         </ul>
-        
-            <img src="static/img/registerWB.png" alt="Registration form">
-        
-        <div class="media-placeholder"><i class="ti ti-photo"></i><div class="label" data-i18n="media.screenshot">SCREENSHOT PLACEHOLDER</div><div class="hint" data-i18n="media.hint.register">Replace with screenshot of the registration form</div></div>
+        <!-- IMAGEN: registerWB.png — formulario de registro -->
+        <img src="static/img/registerWB.png" alt="Registration form">
         <div class="callout callout-info"><i class="ti ti-mail"></i><div data-i18n="p.reg.note">After registering, an n8n workflow sends a welcome email. If you don't receive it within a few minutes, check your spam folder.</div></div>
       </div>
+
 
       <!-- ── LOGIN ── -->
       <div class="manual-page" id="page-login">
         <div class="breadcrumb">Manual / Account / <span class="active" data-i18n="bc.login">Login</span></div>
         <h1 data-i18n="p.log.title">Logging in</h1>
         <p class="lead" data-i18n="p.log.lead">Once registered, log in with your credentials. Each session triggers an automatic notification email.</p>
-            
-          <img src="static/img/loginWB.png" alt="Login form">
-        
-          <div class="media-placeholder"><i class="ti ti-photo"></i><div class="label" data-i18n="media.screenshot">SCREENSHOT PLACEHOLDER</div><div class="hint" data-i18n="media.hint.login">Replace with screenshot of the login form</div></div>
+        <!-- IMAGEN: loginWB.png — formulario de login -->
+        <img src="static/img/loginWB.png" alt="Login form">
         <div class="callout callout-warn"><i class="ti ti-alert-triangle"></i><div data-i18n="p.log.warn">If you can't access your account, password recovery is being implemented. For now, contact the administrator.</div></div>
       </div>
 
-      <!-- ── STEP 1 ── -->
+
+      <!-- ── STEP 1: PASTE URL ── -->
       <div class="manual-page" id="page-step1">
         <div class="breadcrumb">Manual / Usage / <span class="active" data-i18n="bc.step1">Paste your URL</span></div>
         <h1 data-i18n="p.s1.title">Step 1 — Paste your API URL</h1>
@@ -548,7 +545,7 @@
           https://restcountries.com/v3.1/all
           https://fakestoreapi.com/products
         </pre>
-        <!-- asistente-schema.png: pantalla de análisis con URL pegada y schema propuesto -->
+        <!-- IMAGEN: asistente-schema.png — pantalla del asistente con URL pegada y schema propuesto -->
         <img
           src="static/img/asistente-schema.png"
           alt="WebBuilder URL input showing AI-generated schema proposal for fakestoreapi"
@@ -557,7 +554,8 @@
         <div class="callout callout-info"><i class="ti ti-bulb"></i><div data-i18n="p.s1.tip">Tip: The more structured the data, the better the AI proposal. APIs with consistent fields across records work best.</div></div>
       </div>
 
-      <!-- ── STEP 2 ── -->
+
+      <!-- ── STEP 2: REVIEW PLAN ── -->
       <div class="manual-page" id="page-step2">
         <div class="breadcrumb">Manual / Usage / <span class="active" data-i18n="bc.step2">Review the plan</span></div>
         <h1 data-i18n="p.s2.title">Step 2 — Review the AI plan</h1>
@@ -569,10 +567,9 @@
           <li data-i18n="p.s2.l3"><strong>Human-readable labels</strong> — clean names for each field.</li>
           <li data-i18n="p.s2.l4"><strong>Data preview</strong> — first few normalized records.</li>
         </ul>
-        
         <h2 data-i18n="p.s2.h2">Edit the schema before generating</h2>
         <p data-i18n="p.s2.p1">If the proposal doesn't match what you want, use the editor to adjust fields, labels and site type — or write a natural language instruction to regenerate the plan entirely.</p>
-        <!-- asistente-edit.png: editor de campos con checkboxes y preview de datos reales -->
+        <!-- IMAGEN: asistente-edit.png — editor de campos con checkboxes y preview de datos reales -->
         <img
           src="static/img/asistente-edit.png"
           alt="Schema editor with field toggles, labels and live data preview"
@@ -582,15 +579,12 @@
           "Make it a minimalist portfolio, hide the price field."
           "Show this as a calendar of events grouped by month."
           "Highlight the rating field prominently in each card."</pre>
-        <!--
-          VIDEO PLACEHOLDER — vídeo mostrando edición y regeneración
-          Cuando tengas el vídeo sustituye por:
-            <video src="static/video/demo-regenerate.mp4" controls style="width:100%;border-radius:8px;margin-top:16px"></video>
-        -->
-        <div class="media-placeholder"><i class="ti ti-video"></i><div class="label" data-i18n="media.video">VIDEO PLACEHOLDER</div><div class="hint" data-i18n="media.hint.step2b">Replace with video showing the schema edit and regeneration flow</div></div>
+        <!-- VIDEO: edit-schema.mp4 — edición del schema y regeneración del plan -->
+        <video src="static/video/edit-schema.mp4" controls style="width:100%;border-radius:8px;margin-top:16px"></video>
       </div>
 
-      <!-- ── STEP 3 ── -->
+
+      <!-- ── STEP 3: GENERATE ── -->
       <div class="manual-page" id="page-step3">
         <div class="breadcrumb">Manual / Usage / <span class="active" data-i18n="bc.step3">Generate project</span></div>
         <h1 data-i18n="p.s3.title">Step 3 — Generate the project</h1>
@@ -603,13 +597,13 @@
           <li data-i18n="p.s3.l4"><code>load_data</code> — management command that fetches and loads the data.</li>
           <li data-i18n="p.s3.l5"><code>Dockerfile</code> &amp; <code>entrypoint.sh</code> — ready for deployment.</li>
         </ul>
-        <!-- asistente-deploy1.png: resumen del proyecto generado (27 archivos, 3 páginas, 8 LLM calls) -->
+        <!-- IMAGEN: asistente-deploy1.png — resumen del proyecto generado (archivos, páginas, LLM calls) -->
         <img
           src="static/img/asistente-deploy1.png"
           alt="Generated project summary showing 27 files, 3 pages, 8 fields and 8 LLM calls with 0 errors"
           style="border:1px solid var(--border-subtle);border-radius:8px;margin:20px 0;width:100%"
         />
-        <!-- asistente-code.png: visor del models.py con árbol de 27 archivos a la izquierda -->
+        <!-- IMAGEN: asistente-code.png — visor del models.py con árbol de 27 archivos -->
         <img
           src="static/img/asistente-code.png"
           alt="Generated models.py file in the built-in code viewer with full 27-file project tree"
@@ -618,12 +612,13 @@
         <div class="callout callout-info"><i class="ti ti-clock"></i><div data-i18n="p.s3.tip">Generation takes 20–60 seconds depending on the LLM provider. You'll receive an email notification when it's done.</div></div>
       </div>
 
-      <!-- ── STEP 4 ── -->
+
+      <!-- ── STEP 4: DOWNLOAD & DEPLOY ── -->
       <div class="manual-page" id="page-step4">
         <div class="breadcrumb">Manual / Usage / <span class="active" data-i18n="bc.step4">Download &amp; deploy</span></div>
         <h1 data-i18n="p.s4.title">Step 4 — Download and deploy</h1>
         <p class="lead" data-i18n="p.s4.lead">Download the ZIP, unzip it, and you have a full Django project ready to run.</p>
-        <!-- asistente-deploy2.png: sitio desplegado con http://localhost:8100 en verde y botón Re-desplegar -->
+        <!-- IMAGEN: asistente-deploy2.png — sitio desplegado en localhost con botón Re-desplegar -->
         <img
           src="static/img/asistente-deploy2.png"
           alt="Deployed site running at localhost:8100 with green status and re-deploy button"
@@ -639,9 +634,10 @@
         <pre><span class="key">$</span> docker build -t my-site .
 <span class="key">$</span> docker run -p 8000:8000 my-site</pre>
         <p data-i18n="p.s4.p1">Visit <code>http://localhost:8000</code> and your generated site is live.</p>
-          <img src="static/img/casosdeuso/rickmortyhome.png" alt="Generated Rick & Morty Catalog running in browser at localhost">
-        </div>
+        <!-- IMAGEN: rickmortyhome.png — sitio generado corriendo en el navegador -->
+        <img src="static/img/casosdeuso/rickmortyhome.png" alt="Generated Rick & Morty Catalog running in browser at localhost">
       </div>
+
 
       <!-- ── TESTED APIs ── -->
       <div class="manual-page" id="page-apis">
@@ -670,7 +666,7 @@
             </tbody>
           </table>
         </div>
-        <!-- historial-analisis.png: 52 análisis reales con las URLs de las APIs usadas -->
+        <!-- IMAGEN: historial-analisis.png — 52 análisis reales con URLs de las APIs usadas -->
         <img
           src="static/img/historial-analisis.png"
           alt="Analysis history showing 52 real analyses including restcountries, fakestoreapi, cocktaildb and github"
@@ -678,6 +674,7 @@
         />
         <div class="callout callout-info"><i class="ti ti-bulb"></i><div data-i18n="p.apis.tip">Tip: Add <code>?limit=20</code> or similar parameters to keep the dataset small during your first test — generation is faster and the AI proposal is more accurate with focused data.</div></div>
       </div>
+
 
       <!-- ── HISTORY ── -->
       <div class="manual-page" id="page-history">
@@ -692,19 +689,20 @@
           <li data-i18n="p.h.l4">Parsed data and LLM summary</li>
           <li data-i18n="p.h.l5">Errors, if any</li>
         </ul>
-        <!-- historial-analisis.png: tab Análisis con 52 entradas reales -->
+        <!-- IMAGEN: historial-analisis.png — tab Análisis con 52 entradas -->
         <img
           src="static/img/historial-analisis.png"
           alt="Analysis history tab with 52 real entries showing URLs, dates and statuses"
           style="border:1px solid var(--border-subtle);border-radius:8px;margin:20px 0;width:100%"
         />
-        <!-- historial-publicaciones.png: tab Sitios publicados con 47 sitios reales con nombres -->
+        <!-- IMAGEN: historial-publicaciones.png — tab Sitios publicados con 47 sitios -->
         <img
           src="static/img/historial-publicaciones.png"
-          alt="Published sites tab showing 47 generated sites: Countries Explorer, Cocktail Recipes, Modern Online Store and more"
+          alt="Published sites tab showing 47 generated sites"
           style="border:1px solid var(--border-subtle);border-radius:8px;margin:20px 0;width:100%"
         />
       </div>
+
 
       <!-- ── CONFIG ── -->
       <div class="manual-page" id="page-config">
@@ -723,7 +721,7 @@
           <li data-i18n="p.c.l3"><strong>OpenAI</strong> — original endpoint, GPT-4 models.</li>
           <li data-i18n="p.c.l4"><strong>Local models</strong> — via Ollama or LM Studio with OpenAI-compatible API.</li>
         </ul>
-        <!-- eleccion-llm.png: modal de selección de modelo con Llama 4 Scout, Llama 3.3 70B, Qwen3 Coder -->
+        <!-- IMAGEN: eleccion-llm.png — modal de selección de modelo -->
         <img
           src="static/img/eleccion-llm.png"
           alt="LLM model selection modal showing Llama 4 Scout on Groq, Llama 3.3 70B and Qwen3 Coder on OpenRouter"
@@ -731,6 +729,7 @@
         />
         <div class="callout callout-warn"><i class="ti ti-key"></i><div data-i18n="p.c.warn">Never commit your <code>.env</code> file to git. Use <code>.env.example</code> as a template instead.</div></div>
       </div>
+
 
       <!-- ── COMMON ERRORS ── -->
       <div class="manual-page" id="page-errors">
@@ -745,6 +744,7 @@
         <div class="callout callout-info" style="margin-top:24px"><i class="ti ti-info-circle"></i><div data-i18n="p.err.note">If you find an error not listed here, check the analysis history — the full error message is stored there for each failed generation.</div></div>
       </div>
 
+
       <!-- ── FAQ ── -->
       <div class="manual-page" id="page-faq">
         <div class="breadcrumb">Manual / More / <span class="active">FAQ</span></div>
@@ -758,16 +758,18 @@
         <div class="faq-item" onclick="this.classList.toggle('open')"><div class="faq-q"><span data-i18n="p.faq.q6">How large can the dataset be?</span><i class="ti ti-plus"></i></div><div class="faq-a"><div class="faq-a-inner" data-i18n="p.faq.a6">WebBuilder sends a sample (not the full dataset) to the LLM for analysis. The full data is loaded by the generated management command at runtime. There's no hard limit, but very large APIs may need pagination.</div></div></div>
       </div>
 
+
     </div><!-- /manual-content -->
   </div><!-- /manual-wrapper -->
 </div><!-- /manual-shell -->
+
 
 <!-- ============================================================
      FOOTER
      ============================================================ -->
 <footer>
   <div class="footer-logo">
-    <i class="ti ti-code-circle-2"></i>
+    <img src="static/img/logo.png" style="height:24px;width:auto;" alt="WebBuilder logo">
     <span>WebBuilder</span>
   </div>
   <div data-i18n="footer.tag">Final Degree Project · API-to-Website with generative AI</div>
