@@ -396,6 +396,17 @@ const translations = {
     'p.faq.q6':    'How large can the dataset be?',
     'p.faq.a6':    "WebBuilder sends a sample (not the full dataset) to the LLM for analysis. The full data is loaded by the generated management command at runtime. There's no hard limit, but very large APIs may need pagination.",
 
+    /* ── Academic resources ── */
+    'ac.label':   'ACADEMIC RESOURCES',
+    'ac.title':   'Project documentation.',
+    'ac.sub':     'Full academic materials behind WebBuilder — thesis and defense presentation.',
+    'ac.mem.t':   'Final Degree Project',
+    'ac.mem.d':   'Complete thesis document covering the research, design, development and evaluation of WebBuilder.',
+    'ac.mem.btn': 'Download thesis',
+    'ac.pres.t':  'Defense Presentation',
+    'ac.pres.d':  'Slides used during the tribunal defense. Key findings, architecture overview and live demo summary.',
+    'ac.pres.btn':'View presentation',
+
     /* ── Footer ── */
     'footer.tag': 'Final Degree Project · API-to-Website with generative AI'
   },
@@ -683,6 +694,17 @@ const translations = {
     'p.faq.a5':    'Sí — se envía una muestra de los datos parseados al LLM para que analice la estructura. Usa modelos locales si necesitas privacidad total.',
     'p.faq.q6':    '¿Qué tamaño máximo puede tener el dataset?',
     'p.faq.a6':    "WebBuilder envía una muestra (no el dataset completo) al LLM para el análisis. Los datos completos los carga el management command generado en tiempo de ejecución. No hay límite fijo, pero las APIs muy grandes pueden necesitar paginación.",
+
+    /* ── Recursos académicos ── */ 
+    'ac.label':   'RECURSOS ACADÉMICOS',
+    'ac.title':   'Documentación del proyecto.',
+    'ac.sub':     'Materiales académicos completos de WebBuilder — memoria y presentación ante el tribunal.',
+    'ac.mem.t':   'Trabajo de Fin de Grado',
+    'ac.mem.d':   'Documento completo de la memoria con el diseño, desarrollo y evaluación de WebBuilder.',
+    'ac.mem.btn': 'Descargar memoria',
+    'ac.pres.t':  'Presentación de defensa',
+    'ac.pres.d':  'Diapositivas usadas ante el tribunal. Hallazgos clave, arquitectura y resumen de la demo.',
+    'ac.pres.btn':'Ver presentación',
 
     /* ── Footer ── */
     'footer.tag': 'Trabajo de Fin de Grado · API a web con IA generativa'
