@@ -1122,7 +1122,7 @@ pre .string  { color: var(--syntax-string); }
    ============================================================ */
 footer {
   border-top: 1px solid var(--border-subtle);
-  padding: 40px 32px;
+  padding: 25px 30px;
   text-align: center;
   color: var(--text-muted);
   font-size: var(--text-xs);
@@ -1144,7 +1144,33 @@ footer {
 
 
 /* ============================================================
-   18. RESPONSIVE
+   18. ACADEMIC RESOURCES
+   ============================================================ */
+
+/* Contenido centrado */
+#academic .section-label { justify-content: center; }
+#academic .section-title { text-align: center; max-width: 100%; }
+#academic .section-sub   { text-align: center; max-width: 100%; margin-left: auto; margin-right: auto; }
+
+
+/* ============================================================
+   19. CONTACT FLOAT
+   ============================================================ */
+   
+/* ── Boton de contenido personal ── */
+.contact-float { position: fixed; bottom: 28px; left: 28px; z-index: 999; }
+.contact-float-btn { width: 52px; height: 52px; border-radius: 50%; background: var(--accent); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform .2s; }
+.contact-float-btn:hover { transform: scale(1.08); }
+.contact-float-btn i { font-size: 22px; color: #fff; }
+.contact-float-menu { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; margin-bottom: 12px; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .2s, transform .2s; }
+.contact-float.open .contact-float-menu { opacity: 1; pointer-events: all; transform: translateY(0); }
+.contact-float-item { display: flex; align-items: center; gap: 8px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 24px; padding: 8px 14px; font-size: 13px; color: var(--text-primary); text-decoration: none; white-space: nowrap; transition: border-color .15s; }
+.contact-float-item:hover { border-color: var(--accent); }
+.contact-float-item i { font-size: 16px; color: var(--accent); }
+
+
+/* ============================================================
+   20. RESPONSIVE
    ============================================================ */
 @media (max-width: 1100px) {
   .hero-grid     { grid-template-columns: 1fr; gap: 48px; }
@@ -1180,7 +1206,7 @@ footer {
 
 
 /* ============================================================
-   19. SCROLLBAR
+   21. SCROLLBAR
    ============================================================ */
 ::-webkit-scrollbar        { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track  { background: var(--bg-deep); }
