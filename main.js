@@ -412,6 +412,36 @@ const translations = {
     'vid.local.cmd': 'RUN IT LOCALLY',
     'vid.title': 'See it in action.',
     'how.steplabel': 'FOUR STEPS',
+
+    /* ── Instalation ── */
+    'sb.install':     'Installation',
+    'bc.install':     'Installation',
+    'p.inst.title':   'Installation',
+    'p.inst.lead':    'How to run WebBuilder on your local machine from scratch.',
+    'p.inst.h0':      'Prerequisites',
+    'p.inst.l1':      'Python 3.11 or higher',
+    'p.inst.l2':      'PostgreSQL 14 or higher',
+    'p.inst.l3':      'Git',
+    'p.inst.l4':      'A valid API key for any OpenAI-compatible LLM provider (Groq, OpenRouter, OpenAI…)',
+    'p.inst.h1':      '1. Clone the repository',
+    'p.inst.h2':      '2. Create and activate a virtual environment',
+    'p.inst.h3':      '3. Install dependencies',
+    'p.inst.h4':      '4. Configure the environment',
+    'p.inst.p4':      'Copy the example file and fill in your values:',
+    'p.inst.p4b':     'Minimum required variables:',
+    'p.inst.note1':   'To generate a valid FIELD_ENCRYPTION_KEY run:',
+    'p.inst.h5':      '5. Create the database',
+    'p.inst.h6':      '6. Run migrations',
+    'p.inst.h7':      '7. Start the server',
+    'p.inst.p5':      'Open http://localhost:8000 and WebBuilder is ready.',
+    'p.inst.note2':   'n8n is optional for local development. Without it, email notifications and automated deploys won\'t work, but the core generation flow works fine.',
+    
+    'p.inst.p4b':       'Full .env reference — edit each value before running the app:',
+    'p.inst.env.db':    'PostgreSQL credentials. You must have PostgreSQL running locally and the database created (step 5 below). Leave HOST and PORT as-is unless your setup differs.',
+    'p.inst.env.llm':   'The AI provider WebBuilder uses to analyze APIs and generate code. Groq is recommended to start — it has a free tier and is the fastest. Just set your key and leave the URL and model as shown.',
+    'p.inst.env.n8n':   'Optional webhooks for automations (welcome emails, deploy, notifications). If you don\'t have n8n running locally, leave the default values — the app will start fine without them.',
+    'p.inst.env.token': 'A static token to protect internal metric endpoints. Set any random string.',
+    'p.inst.env.fernet':'Fernet key used to encrypt user API keys stored in the database. Required. Generate one with:',
     
     /* ── Footer ── */
     'footer.tag': 'Final Degree Project · API-to-Website with generative AI'
@@ -718,7 +748,36 @@ const translations = {
     'vid.title': 'Míralo en acción.',
     'how.steplabel': 'CUATRO PASOS',
     
+    /* ── Instalation ── */
+    'sb.install':     'Instalación',
+    'bc.install':     'Instalación',
+    'p.inst.title':   'Instalación',
+    'p.inst.lead':    'Cómo ejecutar WebBuilder en tu máquina local desde cero.',
+    'p.inst.h0':      'Requisitos previos',
+    'p.inst.l1':      'Python 3.11 o superior',
+    'p.inst.l2':      'PostgreSQL 14 o superior',
+    'p.inst.l3':      'Git',
+    'p.inst.l4':      'Una API key válida de cualquier proveedor compatible con OpenAI (Groq, OpenRouter, OpenAI…)',
+    'p.inst.h1':      '1. Clonar el repositorio',
+    'p.inst.h2':      '2. Crear y activar el entorno virtual',
+    'p.inst.h3':      '3. Instalar dependencias',
+    'p.inst.h4':      '4. Configurar el entorno',
+    'p.inst.p4':      'Copia el archivo de ejemplo y rellena tus valores:',
+    'p.inst.p4b':     'Variables mínimas necesarias:',
+    'p.inst.note1':   'Para generar un FIELD_ENCRYPTION_KEY válido ejecuta:',
+    'p.inst.h5':      '5. Crear la base de datos',
+    'p.inst.h6':      '6. Aplicar migraciones',
+    'p.inst.h7':      '7. Arrancar el servidor',
+    'p.inst.p5':      'Abre http://localhost:8000 y WebBuilder estará listo.',
+    'p.inst.note2':   'n8n es opcional para desarrollo local. Sin él no funcionarán las notificaciones por email ni el despliegue automático, pero el flujo principal de generación sí funciona.',
 
+    'p.inst.p4b':       'Referencia completa del .env — edita cada valor antes de arrancar la app:',
+    'p.inst.env.db':    'Credenciales de PostgreSQL. Debes tener PostgreSQL corriendo en local y la base de datos creada (paso 5). Deja HOST y PORT como están salvo que tu configuración sea diferente.',
+    'p.inst.env.llm':   'El proveedor de IA que usa WebBuilder para analizar APIs y generar código. Groq es el recomendado para empezar — tiene tier gratuito y es el más rápido. Solo pon tu clave y deja la URL y el modelo tal como están.',
+    'p.inst.env.n8n':   'Webhooks opcionales para automatizaciones (emails de bienvenida, despliegue, notificaciones). Si no tienes n8n corriendo en local, deja los valores por defecto — la app arranca sin ellos.',
+    'p.inst.env.token': 'Token estático para proteger los endpoints internos de métricas. Pon cualquier string aleatorio.',
+    'p.inst.env.fernet':'Clave Fernet para cifrar las API keys de los usuarios en la base de datos. Obligatoria. Genera una con:',
+    
     /* ── Footer ── */
     'footer.tag': 'Trabajo de Fin de Grado · API a web con IA generativa'
   }

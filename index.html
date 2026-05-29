@@ -178,24 +178,6 @@
 
     <p class="video-label" data-i18n="vid.pipeline">FULL PIPELINE — FROM API URL TO GENERATED SITE</p>
     <video src="static/video/pipeline.mp4" controls style="width:100%;border-radius:8px;margin-top:8px"></video>
-
-    <div style="display:flex;gap:32px;align-items:flex-start;margin-top:48px;">
-      <div style="flex:0 0 42%;">
-        <p class="video-label" data-i18n="vid.local.cmd">RUN IT LOCALLY</p>
-        <pre style="margin-top:8px;"><span class="key">$</span> unzip my-site.zip &amp;&amp; cd my-site
-<span class="key">$</span> python -m venv venv
-<span class="key">$</span> source venv/bin/activate  <span class="comment"># Mac/Linux</span>
-<span class="key">$</span> venv\Scripts\activate     <span class="comment"># Windows</span>
-<span class="key">$</span> pip install -r requirements.txt
-<span class="key">$</span> python manage.py migrate
-<span class="key">$</span> python manage.py load_data
-<span class="key">$</span> python manage.py runserver</pre>
-      </div>
-      <div style="flex:1;">
-        <p class="video-label" data-i18n="vid.local">LOCAL DEPLOYMENT WALKTHROUGH</p>
-        <video src="static/video/despliegue-local.mp4" controls style="width:100%;border-radius:8px;margin-top:8px"></video>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -470,6 +452,7 @@
     <aside class="sidebar">
       <div class="sb-section-label" data-i18n="sb.overview">OVERVIEW</div>
       <div class="sb-item active" data-page="intro"      onclick="showPage('intro',this)"><i class="ti ti-home"></i><span data-i18n="sb.intro">Introduction</span></div>
+      <div class="sb-item" data-page="install" onclick="showPage('install',this)"><i class="ti ti-download"></i><span data-i18n="sb.install">Installation</span></div>
       <div class="sb-item"        data-page="quickstart" onclick="showPage('quickstart',this)"><i class="ti ti-bolt"></i><span data-i18n="sb.quick">Quick start</span></div>
 
       <div class="sb-section-label" data-i18n="sb.account">ACCOUNT</div>
@@ -512,6 +495,103 @@
         <img src="static/img/homeWB.png" alt="WebBuilder home page">
       </div>
 
+      <!-- ── INSTALLATION ── -->
+      <div class="manual-page" id="page-install">
+        <div class="breadcrumb">Manual / <span class="active" data-i18n="bc.install">Installation</span></div>
+        <h1 data-i18n="p.inst.title">Installation</h1>
+        <p class="lead" data-i18n="p.inst.lead">How to run WebBuilder on your local machine from scratch.</p>
+
+        <h2 data-i18n="p.inst.h0">Prerequisites</h2>
+        <ul>
+          <li data-i18n="p.inst.l1">Python 3.11 or higher</li>
+          <li data-i18n="p.inst.l2">PostgreSQL 14 or higher</li>
+          <li data-i18n="p.inst.l3">Git</li>
+          <li data-i18n="p.inst.l4">A valid API key for any OpenAI-compatible LLM provider (Groq, OpenRouter, OpenAI…)</li>
+        </ul>
+
+        <h2 data-i18n="p.inst.h1">1. Clone the repository</h2>
+      <pre><span class="key">$</span> git clone https://github.com/AlejandroTejero/WebBuilder.git
+<span class="key">$</span> cd WebBuilder</pre>
+
+        <h2 data-i18n="p.inst.h2">2. Create and activate a virtual environment</h2>
+      <pre><span class="key">$</span> python -m venv venv
+<span class="key">$</span> source venv/bin/activate  <span class="comment"># Mac/Linux</span>
+<span class="key">$</span> venv\Scripts\activate     <span class="comment"># Windows</span></pre>
+
+        <h2 data-i18n="p.inst.h3">3. Install dependencies</h2>
+      <pre><span class="key">$</span> pip install -r requirements.txt</pre>
+
+        <h2 data-i18n="p.inst.h4">4. Configure the environment</h2>
+        <p data-i18n="p.inst.p4">Copy the example file and fill in your values:</p>
+      <pre><span class="key">$</span> cp .env.example .env</pre>
+
+        <p data-i18n="p.inst.p4b">Full .env reference — edit each value before running the app:</p>
+
+<pre><span class="comment"># Django</span>
+<span class="env-key">SECRET_KEY</span>=<span class="env-val">your-django-secret-key-here</span>
+
+<span class="comment"># PostgreSQL</span>
+<span class="env-key">DB_NAME</span>=<span class="env-val">webbuilder_db</span>
+<span class="env-key">DB_USER</span>=<span class="env-val">webbuilder_user</span>
+<span class="env-key">DB_PASSWORD</span>=<span class="env-val">your-db-password</span>
+<span class="env-key">DB_HOST</span>=<span class="env-val">localhost</span>
+<span class="env-key">DB_PORT</span>=<span class="env-val">5432</span>
+
+<span class="env-key">LLM_BASE_URL</span>=<span class="env-val">https://api.groq.com/openai/v1</span>
+<span class="env-key">LLM_API_KEY</span>=<span class="env-val">gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
+<span class="env-key">LLM_MODEL</span>=<span class="env-val">meta-llama/llama-4-scout-17b-16e-instruct</span>
+
+<span class="comment"># n8n webhooks</span>
+<span class="env-key">N8N_DEPLOY_WEBHOOK</span>=<span class="env-val">http://localhost:5678/webhook/webbuilder-deploy</span>
+<span class="env-key">N8N_LOCAL_FILES_PATH</span>=<span class="env-val">/path/to/n8n/local-files</span>
+<span class="env-key">N8N_WEBHOOK_REGISTRO</span>=<span class="env-val">http://localhost:5678/webhook/WebBuilder-Register</span>
+<span class="env-key">N8N_WEBHOOK_LOGIN</span>=<span class="env-val">http://localhost:5678/webhook/WebBuilder-Login</span>
+<span class="env-key">N8N_WEBHOOK_GENERATION_DONE</span>=<span class="env-val">http://localhost:5678/webhook/webbuilder-generation-done</span>
+
+<span class="comment"># Internal API token</span>
+<span class="env-key">INTERNAL_TOKEN</span>=<span class="env-val">your-internal-token-here</span>
+
+<span class="comment"># Field encryption (Fernet key)</span>
+<span class="env-key">FIELD_ENCRYPTION_KEY</span>=<span class="env-val">your-fernet-encryption-key-here</span></pre>
+
+        <div class="callout callout-info"><i class="ti ti-info-circle"></i><div data-i18n="p.inst.env.sk">
+          <strong>SECRET_KEY</strong> — Django's signing key for sessions and tokens. Generate one with:
+          <code>python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"</code>
+        </div></div>
+
+        <div class="callout callout-info"><i class="ti ti-database"></i><div>
+          <strong>DB_*</strong> — <span data-i18n="p.inst.env.db">PostgreSQL credentials. You must have PostgreSQL running locally and the database created (step 5 below). Leave HOST and PORT as-is unless your setup differs.</span>
+        </div></div>
+
+        <div class="callout callout-info"><i class="ti ti-robot"></i><div>
+          <strong>LLM_*</strong> — <span data-i18n="p.inst.env.llm">The AI provider WebBuilder uses to analyze APIs and generate code. Groq is recommended to start — it has a free tier and is the fastest. Just set your key and leave the URL and model as shown.</span>
+        </div></div>
+
+        <div class="callout callout-warn"><i class="ti ti-brand-n8n"></i><div>
+          <strong>N8N_*</strong> — <span data-i18n="p.inst.env.n8n">Optional webhooks for automations (welcome emails, deploy, notifications). If you don't have n8n running locally, leave the default values — the app will start fine without them.</span>
+        </div></div>
+
+        <div class="callout callout-info"><i class="ti ti-lock"></i><div>
+          <strong>INTERNAL_TOKEN</strong> — <span data-i18n="p.inst.env.token">A static token to protect internal metric endpoints. Set any random string.</span>
+        </div></div>
+
+        <div class="callout callout-info"><i class="ti ti-key"></i><div>
+          <strong>FIELD_ENCRYPTION_KEY</strong> — <span data-i18n="p.inst.env.fernet">Fernet key used to encrypt user API keys stored in the database. Required. Generate one with:</span><br>
+          <code>python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"</code>
+        </div></div>
+
+        <h2 data-i18n="p.inst.h5">5. Create the database</h2>
+      <pre><span class="key">$</span> createdb webbuilder_db</pre>
+
+        <h2 data-i18n="p.inst.h6">6. Run migrations</h2>
+      <pre><span class="key">$</span> python manage.py migrate</pre>
+
+        <h2 data-i18n="p.inst.h7">7. Start the server</h2>
+      <pre><span class="key">$</span> python manage.py runserver</pre>
+
+        <p data-i18n="p.inst.p5">Open <code>http://localhost:8000</code> and WebBuilder is ready.</p>
+        <div class="callout callout-warn"><i class="ti ti-alert-triangle"></i><div data-i18n="p.inst.note2">n8n is optional for local development. Without it, email notifications and automated deploys won't work, but the core generation flow works fine.</div></div>
+      </div>
 
       <!-- ── QUICK START ── -->
       <div class="manual-page" id="page-quickstart">
