@@ -407,6 +407,12 @@ const translations = {
     'ac.pres.d':  'Slides used during the tribunal defense. Key findings, architecture overview and live demo summary.',
     'ac.pres.btn':'View presentation',
 
+    'vid.pipeline': 'FULL PIPELINE — FROM API URL TO GENERATED SITE',
+    'vid.local':    'LOCAL DEPLOYMENT WALKTHROUGH',
+    'vid.local.cmd': 'RUN IT LOCALLY',
+    'vid.title': 'See it in action.',
+    'how.steplabel': 'FOUR STEPS',
+    
     /* ── Footer ── */
     'footer.tag': 'Final Degree Project · API-to-Website with generative AI'
   },
@@ -705,6 +711,13 @@ const translations = {
     'ac.pres.t':  'Presentación de defensa',
     'ac.pres.d':  'Diapositivas usadas ante el tribunal. Hallazgos clave, arquitectura y resumen de la demo.',
     'ac.pres.btn':'Ver presentación',
+
+    'vid.pipeline': 'PIPELINE COMPLETO — DE URL DE API A SITIO GENERADO',
+    'vid.local':    'DESPLIEGUE EN LOCAL — PASO A PASO',
+    'vid.local.cmd': 'EJECUTAR EN LOCAL',
+    'vid.title': 'Míralo en acción.',
+    'how.steplabel': 'CUATRO PASOS',
+    
 
     /* ── Footer ── */
     'footer.tag': 'Trabajo de Fin de Grado · API a web con IA generativa'

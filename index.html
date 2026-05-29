@@ -169,11 +169,43 @@
 
 
 <!-- ============================================================
-     HOW IT WORKS
+     IN ACTION — Vídeos
      ============================================================ -->
 <section id="how">
   <div class="section-container">
     <div class="section-label reveal" data-i18n="how.label">HOW IT WORKS</div>
+    <h2 class="section-title reveal" data-i18n="vid.title">See it in action.</h2>
+
+    <p class="video-label" data-i18n="vid.pipeline">FULL PIPELINE — FROM API URL TO GENERATED SITE</p>
+    <video src="static/video/pipeline.mp4" controls style="width:100%;border-radius:8px;margin-top:8px"></video>
+
+    <div style="display:flex;gap:32px;align-items:flex-start;margin-top:48px;">
+      <div style="flex:0 0 42%;">
+        <p class="video-label" data-i18n="vid.local.cmd">RUN IT LOCALLY</p>
+        <pre style="margin-top:8px;"><span class="key">$</span> unzip my-site.zip &amp;&amp; cd my-site
+<span class="key">$</span> python -m venv venv
+<span class="key">$</span> source venv/bin/activate  <span class="comment"># Mac/Linux</span>
+<span class="key">$</span> venv\Scripts\activate     <span class="comment"># Windows</span>
+<span class="key">$</span> pip install -r requirements.txt
+<span class="key">$</span> python manage.py migrate
+<span class="key">$</span> python manage.py load_data
+<span class="key">$</span> python manage.py runserver</pre>
+      </div>
+      <div style="flex:1;">
+        <p class="video-label" data-i18n="vid.local">LOCAL DEPLOYMENT WALKTHROUGH</p>
+        <video src="static/video/despliegue-local.mp4" controls style="width:100%;border-radius:8px;margin-top:8px"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     HOW IT WORKS — 4 pasos
+     ============================================================ -->
+<section id="steps" class="section-dark">
+  <div class="section-container">
+    <div class="section-label reveal" data-i18n="how.steplabel">FOUR STEPS</div>
     <h2 class="section-title reveal" data-i18n="how.title">Four steps from raw data to deployed site.</h2>
     <p class="section-sub reveal" data-i18n="how.sub">A guided workflow where the AI proposes and you decide. No black box, no surprises.</p>
 
@@ -203,10 +235,6 @@
         <p data-i18n="how.s4.d">Get a ZIP ready to run locally or deploy in one command with Docker.</p>
       </div>
     </div>
-
-    <!-- VIDEO: demo flujo completo (~60s) — también se usa en Manual › Quick Start -->
-    <video src="static/video/pipeline.mp4" controls style="width:100%;border-radius:8px;margin-top:48px"></video>
-
   </div>
 </section>
 
@@ -495,7 +523,8 @@
         <div class="step-row"><div class="step-row-num">3</div><div class="step-row-body"><div class="step-row-title" data-i18n="p.quick.s3t">Review the AI proposal and generate</div><p class="step-row-text" data-i18n="p.quick.s3d">Accept the LLM plan or regenerate with a custom prompt. Click generate.</p></div></div>
         <div class="step-row"><div class="step-row-num">4</div><div class="step-row-body"><div class="step-row-title" data-i18n="p.quick.s4t">Download the ZIP and run it</div><p class="step-row-text" data-i18n="p.quick.s4d">Unzip, build the Docker image, and you're online.</p></div></div>
         <!-- VIDEO: pipeline.mp4 — mismo vídeo que el del hero (flujo completo) -->
-        <video src="static/video/pipeline.mp4" controls style="width:100%;border-radius:8px;margin-top:16px"></video>
+        <p class="video-label" data-i18n="vid.pipeline">Full pipeline — from API URL to generated site</p>
+        <video src="static/video/pipeline.mp4" controls style="width:100%;border-radius:8px;margin-top:8px"></video>
       </div>
 
 
@@ -626,12 +655,19 @@
         />
         <h2 data-i18n="p.s4.h1">Run it locally</h2>
         <pre><span class="key">$</span> unzip my-site.zip &amp;&amp; cd my-site
+<span class="key">$</span> python -m venv venv
+<span class="key">$</span> source venv/bin/activate  <span class="comment"># Mac/Linux</span>
+<span class="key">$</span> venv\Scripts\activate     <span class="comment"># Windows</span>
 <span class="key">$</span> pip install -r requirements.txt
 <span class="key">$</span> python manage.py migrate
 <span class="key">$</span> python manage.py load_data
 <span class="key">$</span> python manage.py runserver</pre>
+        <p class="video-label" data-i18n="vid.local">Local deployment walkthrough</p>
+        <video src="static/video/despliegue-local.mp4" controls style="width:100%;border-radius:8px;margin-top:8px"></video>
+
+        
         <h2 data-i18n="p.s4.h2">Or with Docker</h2>
-        <pre><span class="key">$</span> docker build -t my-site .
+<pre><span class="key">$</span> docker build -t my-site .
 <span class="key">$</span> docker run -p 8000:8000 my-site</pre>
         <p data-i18n="p.s4.p1">Visit <code>http://localhost:8000</code> and your generated site is live.</p>
         <!-- IMAGEN: rickmortyhome.png — sitio generado corriendo en el navegador -->
@@ -804,7 +840,7 @@
 
 <!-- ============================================================
      FOOTER
-     ============================================================ -->
+     ============================================================
 <footer>
   <div class="footer-logo">
     <img src="static/img/logo.png" style="height:24px;width:auto;" alt="WebBuilder logo">
@@ -812,6 +848,29 @@
   </div>
   <div data-i18n="footer.tag">Final Degree Project · API-to-Website with generative AI</div>
   <div class="footer-meta">BUILT WITH DJANGO + N8N · 2026</div>
+</footer>
+
+-->
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="footer-logo">
+    <img src="static/img/logo.png" style="height:24px;width:auto;" alt="WebBuilder logo">
+    <span>WebBuilder</span>
+  </div>
+  <div data-i18n="footer.tag">Final Degree Project · API-to-Website with generative AI</div>
+  <div class="footer-links">
+    <a href="https://github.com/AlejandroTejero/WebBuilder" target="_blank">
+      <i class="ti ti-brand-github"></i> GitHub
+    </a>
+    <span class="footer-sep">·</span>
+    <a href="TU-URL-WEBBUILDER" target="_blank">
+      <i class="ti ti-external-link"></i> WebBuilder
+    </a>
+  </div>
+  <div class="footer-meta">© 2026 Alejandro Tejero</div>
 </footer>
 
 
