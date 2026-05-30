@@ -763,7 +763,6 @@ const translations = {
     'p.inst.h3':      '3. Instalar dependencias',
     'p.inst.h4':      '4. Configurar el entorno',
     'p.inst.p4':      'Copia el archivo de ejemplo y rellena tus valores:',
-    'p.inst.p4b':     'Variables mínimas necesarias:',
     'p.inst.note1':   'Para generar un FIELD_ENCRYPTION_KEY válido ejecuta:',
     'p.inst.h5':      '5. Crear la base de datos',
     'p.inst.h6':      '6. Aplicar migraciones',
