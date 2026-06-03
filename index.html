@@ -40,7 +40,7 @@
         <button id="lang-es" onclick="setLang('es')">ES</button>
       </div>
       <!-- PENDIENTE: sustituir href por URL real cuando esté desplegado -->
-      <a href="http://178.104.248.235.nip.io" class="nav-cta" data-i18n="nav.cta">Get started</a>
+      <a href="http://178.104.248.235.nip.io" class="nav-cta" data-i18n="nav.cta"><i class="ti ti-player-play" style="font-size:11px"></i> Get started</a>
       <!-- <a href="TU-URL-AQUI" class="nav-cta" target="_blank" data-i18n="nav.cta">Get started</a> -->
     </div>
   </div>
@@ -76,10 +76,12 @@
           <i class="ti ti-player-play"></i>
           <span data-i18n="hero.cta2">See how it works</span>
         </a>
-        <!-- PENDIENTE: sustituir href por URL real cuando esté desplegado -->
-        <a href="http://178.104.248.235.nip.io" class="btn-primary" target="_blank">
-          <i class="ti ti-external-link"></i>
-          <span data-i18n="hero.cta3">WebBuilder</span>
+        <a href="http://178.104.248.235.nip.io" class="btn-launch" target="_blank">
+          <span class="btn-launch-tag">▶ LIVE DEMO</span>
+          <span class="btn-launch-main">
+            <i class="ti ti-external-link"></i>
+            <span data-i18n="hero.cta3">WebBuilder</span>
+          </span>
         </a>
       </div>
       <div class="hero-chips reveal" style="transition-delay:.30s">
@@ -622,6 +624,8 @@
         <!-- IMAGEN: registerWB.png — formulario de registro -->
         <img src="static/img/registerWB.png" alt="Registration form">
         <div class="callout callout-info"><i class="ti ti-mail"></i><div data-i18n="p.reg.note">After registering, an n8n workflow sends a welcome email. If you don't receive it within a few minutes, check your spam folder.</div></div>
+        <h2 data-i18n="p.reg.h2oauth">Or register with a provider</h2>
+        <p data-i18n="p.reg.oauth">You can also create your account instantly using Google or GitHub — no password needed. Click the provider button on the registration form and your account will be created automatically on first access.</p>
       </div>
 
 
@@ -633,6 +637,8 @@
         <!-- IMAGEN: loginWB.png — formulario de login -->
         <img src="static/img/loginWB.png" alt="Login form">
         <div class="callout callout-warn"><i class="ti ti-alert-triangle"></i><div data-i18n="p.log.warn">If you can't access your account, password recovery is being implemented. For now, contact the administrator.</div></div>
+        <h2 data-i18n="p.log.h1oauth">Or log in with a provider</h2>
+        <p data-i18n="p.log.oauth">If you registered with Google or GitHub, use the same provider button to log in. Each OAuth login also triggers an automatic notification email, just like the traditional login.</p>
       </div>
 
 
@@ -946,7 +952,7 @@
       <i class="ti ti-brand-github"></i> GitHub
     </a>
     <span class="footer-sep">·</span>
-    <a href="TU-URL-WEBBUILDER" target="_blank">
+    <a href="http://178.104.248.235.nip.io" target="_blank">
       <i class="ti ti-external-link"></i> WebBuilder
     </a>
   </div>

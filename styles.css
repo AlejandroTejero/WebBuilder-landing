@@ -188,7 +188,7 @@ img { max-width: 100%; display: block; border-radius: 6px; }
   font-weight: 600;
   transition: background 0.2s;
 }
-.nav-cta:hover { background: var(--accent-soft); }
+.nav-cta:hover { background: #f0fdf4; }
 
 
 /* ============================================================
@@ -1222,3 +1222,41 @@ footer {
 
 /* ── Video label ── */
 .video-label { font-family: 'JetBrains Mono', monospace; font-size: var(--text-xs); color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 32px; margin-bottom: 0; }
+
+
+/* Botones especiales direcitos a WebBuilder */
+.btn-launch {
+  background: #ffffffe3;
+  color: #16a34a;
+  padding: 10px 20px 10px 16px;
+  border-radius: 10px;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  animation: btn-pulse 2.5s ease-in-out infinite;
+}
+.btn-launch-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #16a34a;
+  opacity: 0.75;
+}
+.btn-launch-main {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: #16a34a;
+}
+@keyframes btn-pulse {
+  0%   { box-shadow: 0 0 0 1px rgba(34,197,94,0.4), 0 4px 24px rgba(22,163,74,0.35); }
+  50%  { box-shadow: 0 0 0 4px rgba(34,197,94,0.2), 0 4px 32px rgba(22,163,74,0.5); }
+  100% { box-shadow: 0 0 0 1px rgba(34,197,94,0.4), 0 4px 24px rgba(22,163,74,0.35); }
+}
+.nav-cta { animation: btn-pulse 2.5s ease-in-out infinite; background: #fff; color: #16a34a; font-weight: 700; }

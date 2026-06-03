@@ -295,10 +295,14 @@ const translations = {
     'p.reg.l2':    'A password (use a strong one — your analyses are stored under this account).',
     'p.reg.l3':    'A username for display.',
     'p.reg.note':  "After registering, an n8n workflow sends a welcome email. If you don't receive it within a few minutes, check your spam folder.",
+    'p.reg.h2oauth': 'Or register with a provider',
+    'p.reg.oauth':   'You can also create your account instantly using Google or GitHub — no password needed. Click the provider button on the registration form and your account will be created automatically on first access.',
 
     'p.log.title': 'Logging in',
     'p.log.lead':  'Once registered, log in with your credentials. Each session triggers an automatic notification email.',
     'p.log.warn':  "If you can't access your account, password recovery is being implemented. For now, contact the administrator.",
+    'p.log.h1oauth': 'Or log in with a provider',
+    'p.log.oauth':   'If you registered with Google or GitHub, use the same provider button to log in. Each OAuth login also triggers an automatic notification email, just like the traditional login.',
 
     'p.s1.title': 'Step 1 — Paste your API URL',
     'p.s1.lead':  'The first step is to provide a public API endpoint that returns JSON or XML data.',
@@ -630,10 +634,14 @@ const translations = {
     'p.reg.l2':    'Una contraseña (usa una fuerte — tus análisis se guardan bajo esta cuenta).',
     'p.reg.l3':    'Un nombre de usuario para mostrar.',
     'p.reg.note':  'Tras registrarte, un workflow de n8n dispara un email automático. Si no lo recibes en unos minutos, revisa la carpeta de spam.',
+    'p.reg.h2oauth': 'O regístrate con un proveedor',
+    'p.reg.oauth':   'También puedes crear tu cuenta al instante con Google o GitHub, sin necesidad de contraseña. Haz clic en el botón del proveedor en el formulario de registro y tu cuenta se creará automáticamente en el primer acceso.',
 
     'p.log.title': 'Iniciar sesión',
     'p.log.lead':  'Una vez registrado, accede con tus credenciales. Cada sesión dispara un email de notificación automático.',
     'p.log.warn':  'Si no puedes acceder a tu cuenta, el flujo de recuperación de contraseña está en desarrollo. Por ahora, contacta con el administrador.',
+    'p.log.h1oauth': 'O inicia sesión con un proveedor',
+    'p.log.oauth':   'Si te registraste con Google o GitHub, usa el mismo botón de proveedor para iniciar sesión. Cada login OAuth también dispara el email de notificación automático, igual que el login tradicional.',
 
     'p.s1.title': 'Paso 1 — Pega la URL de la API',
     'p.s1.lead':  'El primer paso es proporcionar un endpoint de API pública que devuelva datos en JSON o XML.',
