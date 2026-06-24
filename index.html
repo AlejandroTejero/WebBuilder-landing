@@ -11,7 +11,180 @@
 <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/tabler-icons.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 <link rel="icon" href="static/img/favicon.ico" />
-</head>
+<style>
+/* ── Maintenance / Under improvement states ── */
+.nav-cta--maintenance {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #f1f5f9;
+  color: #64748b;
+  padding: 7px 14px;
+  border-radius: 7px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  cursor: default;
+  border: 1.5px dashed #94a3b8;
+  animation: none !important;
+}
+.btn-launch--maintenance {
+  background: #f1f5f9;
+  color: #64748b;
+  padding: 10px 20px 10px 16px;
+  border-radius: 10px;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  cursor: default;
+  border: 1.5px dashed #94a3b8;
+  animation: none !important;
+  box-shadow: none !important;
+}
+.btn-launch--maintenance .btn-launch-tag {
+  color: #f59e0b;
+  opacity: 1;
+}
+.btn-launch--maintenance .btn-launch-main {
+  color: #64748b;
+}
+.footer-maintenance {
+  font-size: 13px;
+  color: #94a3b8;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: default;
+}
+.footer-maintenance-badge {
+  color: #f59e0b;
+  font-style: italic;
+}
+
+/* ── Maintenance modal ── */
+#maintenance-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+#maintenance-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  max-width: 460px;
+  width: 92%;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px var(--accent-border), var(--shadow-glow);
+}
+
+/* Titlebar */
+.maint-titlebar {
+  background: var(--bg-base);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+.maint-logo {
+  height: 18px;
+  width: auto;
+  border-radius: 3px;
+}
+.maint-titlebar-name {
+  flex: 1;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+#maintenance-close {
+  background: none;
+  border: none;
+  color: var(--text-faint);
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  transition: color 0.15s;
+  font-family: inherit;
+}
+#maintenance-close:hover { color: var(--text-primary); }
+
+/* Body */
+.maint-body {
+  padding: 28px 28px 24px;
+}
+.maint-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--accent-soft);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-bottom: 14px;
+}
+.maint-body h2 {
+  font-size: var(--text-md);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  line-height: var(--leading-tight);
+}
+.maint-body > p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-body);
+  margin: 0;
+}
+.maint-divider {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: 20px 0;
+}
+.maint-body h3 {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.maint-body ul {
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.maint-body ul li {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-body);
+}
+.maint-body ul li::marker {
+  color: var(--accent);
+}
+.maint-repo {
+  font-size: 12px !important;
+  color: var(--text-muted) !important;
+  font-style: italic;
+  line-height: var(--leading-body) !important;
+}
+</style>
 <body>
 
 <!-- SCROLL PROGRESS BAR -->
@@ -39,9 +212,7 @@
         <button id="lang-en" class="active" onclick="setLang('en')">EN</button>
         <button id="lang-es" onclick="setLang('es')">ES</button>
       </div>
-      <!-- PENDIENTE: sustituir href por URL real cuando esté desplegado -->
-      <a href="http://178.104.248.235.nip.io" class="nav-cta" data-i18n="nav.cta"><i class="ti ti-player-play" style="font-size:11px"></i> Get started</a>
-      <!-- <a href="TU-URL-AQUI" class="nav-cta" target="_blank" data-i18n="nav.cta">Get started</a> -->
+      <span class="nav-cta nav-cta--maintenance" onclick="openMaintModal()" title="Application temporarily under improvement" data-i18n-title="nav.cta.title" style="cursor:pointer;"><i class="ti ti-tools" style="font-size:11px"></i> <span data-i18n="nav.cta">Under improvement</span></span>
     </div>
   </div>
 </nav>
@@ -76,13 +247,13 @@
           <i class="ti ti-player-play"></i>
           <span data-i18n="hero.cta2">See how it works</span>
         </a>
-        <a href="http://178.104.248.235.nip.io" class="btn-launch" target="_blank">
-          <span class="btn-launch-tag">▶ LIVE DEMO</span>
+        <span class="btn-launch btn-launch--maintenance" onclick="openMaintModal()" title="Application temporarily under improvement" data-i18n-title="hero.cta3.title" style="cursor:pointer;">
+          <span class="btn-launch-tag">🔧 <span data-i18n="hero.maintenance.tag">IMPROVING</span></span>
           <span class="btn-launch-main">
-            <i class="ti ti-external-link"></i>
+            <i class="ti ti-tools"></i>
             <span data-i18n="hero.cta3">WebBuilder</span>
           </span>
-        </a>
+        </span>
       </div>
       <div class="hero-chips reveal" style="transition-delay:.30s">
         <span data-i18n="hero.chip1">Multi-format input</span>
@@ -512,8 +683,8 @@
         </ul>
 
         <h2 data-i18n="p.inst.h1">1. Clone the repository</h2>
-      <pre><span class="key">$</span> git clone https://github.com/AlejandroTejero/WebBuilder.git
-<span class="key">$</span> cd WebBuilder</pre>
+      <pre><span class="key">$</span> git clone https://github.com/AlejandroTejero/WebBuilder-TFG.git
+<span class="key">$</span> cd WebBuilder-TFG</pre>
 
         <h2 data-i18n="p.inst.h2">2. Create and activate a virtual environment</h2>
       <pre><span class="key">$</span> python -m venv venv
@@ -655,10 +826,10 @@
         </ul>
         <h2 data-i18n="p.s1.h2">Examples that work well</h2>
         <pre><span class="comment"># Copy any of these and paste directly into WebBuilder</span>
-https://pokeapi.co/api/v2/pokemon?limit=20
-https://jsonplaceholder.typicode.com/posts
-https://restcountries.com/v3.1/all
-https://fakestoreapi.com/products
+          https://pokeapi.co/api/v2/pokemon?limit=20
+          https://jsonplaceholder.typicode.com/posts
+          https://restcountries.com/v3.1/all
+          https://fakestoreapi.com/products
         </pre>
         <!-- IMAGEN: asistente-schema.png — pantalla del asistente con URL pegada y schema propuesto -->
         <img
@@ -691,9 +862,9 @@ https://fakestoreapi.com/products
           style="border:1px solid var(--border-subtle);border-radius:8px;margin:20px 0;width:100%"
         />
         <pre><span class="comment"># Example custom prompts to guide the AI</span>
-"Make it a minimalist portfolio, hide the price field."
-"Show this as a calendar of events grouped by month."
-"Highlight the rating field prominently in each card."</pre>
+          "Make it a minimalist portfolio, hide the price field."
+          "Show this as a calendar of events grouped by month."
+          "Highlight the rating field prominently in each card."</pre>
         <!-- VIDEO: edit-schema.mp4 — edición del schema y regeneración del plan -->
         <video src="static/video/edit-schema.mp4" controls style="width:100%;border-radius:8px;margin-top:16px"></video>
       </div>
@@ -913,7 +1084,7 @@ https://fakestoreapi.com/products
         <div class="feature-icon"><i class="ti ti-presentation"></i></div>
         <h3 data-i18n="ac.pres.t">Defense Presentation</h3>
         <p data-i18n="ac.pres.d">Slides used during the tribunal defense. Key findings, architecture overview and live demo summary.</p>
-        <a href="https://webbuildertfg.my.canva.site/" target="_blank" class="btn-primary" style="display:inline-flex;margin-top:16px;font-size:0.85rem;">
+        <a href="TU-URL-PRESENTACION" target="_blank" class="btn-primary" style="display:inline-flex;margin-top:16px;font-size:0.85rem;">
           <i class="ti ti-external-link"></i>
           <span data-i18n="ac.pres.btn">View presentation</span>
         </a>
@@ -952,9 +1123,9 @@ https://fakestoreapi.com/products
       <i class="ti ti-brand-github"></i> GitHub
     </a>
     <span class="footer-sep">·</span>
-    <a href="http://178.104.248.235.nip.io" target="_blank">
-      <i class="ti ti-external-link"></i> WebBuilder
-    </a>
+    <span class="footer-maintenance" title="Application temporarily under improvement" data-i18n-title="nav.cta.title">
+      <i class="ti ti-tools"></i> WebBuilder <span class="footer-maintenance-badge" data-i18n="footer.maintenance">· improving</span>
+    </span>
   </div>
   <div class="footer-meta">© 2026 Alejandro Tejero</div>
 </footer>
@@ -980,6 +1151,40 @@ https://fakestoreapi.com/products
 </div>
 
 <script src="main.js"></script>
+
+<!-- MAINTENANCE MODAL -->
+<div id="maintenance-overlay" onclick="closeMaintModal(event)">
+  <div id="maintenance-modal">
+
+    <!-- Titlebar estilo app-frame -->
+    <div class="maint-titlebar">
+      <div class="window-dots"><span></span><span></span><span></span></div>
+      <img src="static/img/logo.png" alt="WebBuilder logo" class="maint-logo">
+      <span class="maint-titlebar-name">WebBuilder</span>
+      <button id="maintenance-close" onclick="closeMaintModal()" aria-label="Cerrar">&times;</button>
+    </div>
+
+    <!-- Contenido -->
+    <div class="maint-body">
+      <div class="maint-tag" data-i18n="hero.maintenance.tag">EN MEJORA</div>
+      <h2 data-i18n="maint.title">WebBuilder — Volvemos pronto</h2>
+      <p data-i18n="maint.intro">Estamos trabajando en mejoras para ofrecerte una mejor experiencia. La aplicación estará disponible de nuevo en breve.</p>
+
+      <div class="maint-divider"></div>
+
+      <h3 data-i18n="maint.what">¿Qué estamos mejorando?</h3>
+      <ul>
+        <li data-i18n="maint.li1">Optimización del sistema de generación de código con IA</li>
+        <li data-i18n="maint.li2">Mejoras en la interfaz y el flujo de trabajo</li>
+      </ul>
+
+      <div class="maint-divider"></div>
+
+      <p class="maint-repo" data-i18n="maint.repo">El repositorio es público, así que si quieres puedes descargarte la aplicación y ejecutarla tú mismo. Encontrarás todos los pasos en la sección de instalación del manual de usuario, más abajo en esta misma página.</p>
+    </div>
+
+  </div>
+</div>
 
 </body>
 </html>

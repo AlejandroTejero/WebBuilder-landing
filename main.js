@@ -119,7 +119,8 @@ const translations = {
     'nav.features':     'Features',
     'nav.automations':  'Automations',
     'nav.manual':       'Manual',
-    'nav.cta':          'Get started',
+    'nav.cta':          'Under improvement',
+    'nav.cta.title':    'Application temporarily under improvement',
 
     /* ── Hero ── */
     'hero.badge':   'AI-POWERED · FINAL DEGREE PROJECT 2026',
@@ -129,7 +130,18 @@ const translations = {
     'hero.sub':     'Paste a public API URL, review the AI-generated plan, and download a ready-to-deploy Django project. No boilerplate, no setup.',
     'hero.cta1':    'Start the manual',
     'hero.cta2':    'See how it works',
-    'hero.cta3':    'Open WebBuilder',
+    'hero.cta3':    'WebBuilder',
+    'hero.maintenance.tag': 'IMPROVING',
+    'hero.cta3.title': 'Application temporarily under improvement',
+    'footer.maintenance': '· improving',
+
+    /* ── Maintenance modal ── */
+    'maint.title': 'WebBuilder — Coming back soon',
+    'maint.intro': 'We are working on improvements to offer you a better experience. The application will be available again shortly.',
+    'maint.what':  'What are we improving?',
+    'maint.li1':   'Optimisation of the AI code generation system',
+    'maint.li2':   'Improvements to the interface and workflow',
+    'maint.repo':  'The repository is public, so if you want you can download the application and run it yourself. You will find all the steps in the installation section of the user manual, further down on this page.',
     'hero.chip1':   'Multi-format input',
     'hero.chip2':   'Editable AI schema',
     'hero.chip3':   'Django code generation',
@@ -458,7 +470,8 @@ const translations = {
     'nav.features':     'Funcionalidades',
     'nav.automations':  'Automatizaciones',
     'nav.manual':       'Manual',
-    'nav.cta':          'Empezar',
+    'nav.cta':          'En mejora',
+    'nav.cta.title':    'Aplicación temporalmente en proceso de mejora',
 
     /* ── Hero ── */
     'hero.badge':   'IA GENERATIVA · TRABAJO DE FIN DE GRADO 2026',
@@ -468,7 +481,18 @@ const translations = {
     'hero.sub':     'Pega la URL de una API pública, revisa el plan generado por IA y descarga un proyecto Django listo para desplegar. Sin boilerplate, sin configuración.',
     'hero.cta1':    'Ir al manual',
     'hero.cta2':    'Ver cómo funciona',
-    'hero.cta3':    'Abrir WebBuilder',
+    'hero.cta3':    'WebBuilder',
+    'hero.maintenance.tag': 'EN MEJORA',
+    'hero.cta3.title': 'Aplicación temporalmente en proceso de mejora',
+    'footer.maintenance': '· en mejora',
+
+    /* ── Maintenance modal ── */
+    'maint.title': 'WebBuilder — Volvemos pronto',
+    'maint.intro': 'Estamos trabajando en mejoras para ofrecerte una mejor experiencia. La aplicación estará disponible de nuevo en breve.',
+    'maint.what':  '¿Qué estamos mejorando?',
+    'maint.li1':   'Optimización del sistema de generación de código con IA',
+    'maint.li2':   'Mejoras en la interfaz y el flujo de trabajo',
+    'maint.repo':  'El repositorio es público, así que si quieres puedes descargarte la aplicación y ejecutarla tú mismo. Encontrarás todos los pasos en la sección de instalación del manual de usuario, más abajo en esta misma página.',
     'hero.chip1':   'Entrada multi-formato',
     'hero.chip2':   'Schema IA editable',
     'hero.chip3':   'Generación de código Django',
@@ -804,6 +828,12 @@ function setLang(lang) {
     if (value !== undefined) el.textContent = value;
   });
 
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    const key   = el.getAttribute('data-i18n-title');
+    const value = translations[lang][key];
+    if (value !== undefined) el.title = value;
+  });
+
   document.getElementById('lang-en').classList.toggle('active', lang === 'en');
   document.getElementById('lang-es').classList.toggle('active', lang === 'es');
 
@@ -817,3 +847,24 @@ function setLang(lang) {
     if (saved && translations[saved]) setLang(saved);
   } catch (e) {}
 })();
+
+/* ── Maintenance modal ── */
+function openMaintModal() {
+  document.getElementById('maintenance-overlay').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMaintModal(e) {
+  // Close if clicking the overlay backdrop (not the modal itself)
+  if (e && e.target !== document.getElementById('maintenance-overlay')) return;
+  document.getElementById('maintenance-overlay').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// Close on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.getElementById('maintenance-overlay').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+});
